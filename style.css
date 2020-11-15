@@ -17,13 +17,6 @@
     --fancyFont: 'Aguafina Script';
 }
 
-body {
-    background: url('https://www.dinneratthezoo.com/wp-content/uploads/2018/10/smoked-chicken-4.jpg');
-    background-position: center;
-    background-attachment: fixed;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
 body::-webkit-scrollbar {
     background-color: #9993c0;
     width: 10px;
@@ -39,15 +32,104 @@ body::-webkit-scrollbar-thumb:active {
     background-color: #0d5c5e;
 }
 
-.menu {
-    width: 70vw;
-    height: 500vh;
-    background: #625e87ce;
-    margin: 20px auto 0 auto;
+body {
+    background: url('https://www.dinneratthezoo.com/wp-content/uploads/2018/10/smoked-chicken-4.jpg');
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* - - - - - */
+
+.parallax-main {
+    perspective: 1px;
+    height: 100vh;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+.parallax-bg {
+    position: relative;
+    height: 100vh;
+    transform-style: preserve-3d;
+}
+
+.parallax-layer {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+
+.parallax-layer-base {
+    transform: translateZ(0);
+}
+
+.parallax-layer-back {
+    transform: translateZ(-1px) scale(2);
+    text-align: center;
+}
+
+.combos {
     color: var(--textColor1);
-    padding: 15px 30px;
+    background: linear-gradient(rgb(0,0,0,0.9), rgb(0,0,0,0.55));
+    position: sticky;
+    top: 0;
+    width: 20vw;
+    height: 100vh;
+    border-radius: 10px;
+    padding: 16px;
+    margin-bottom: 20px;
+    overflow: auto;
+}
+
+.combos h2{
+    font-size: 35px;
+    font-family: var(--fancyFont);
+    margin-bottom: 10px;
+}
+
+.menu-body {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.menu-body p {
+    font-size: 30px;
+}
+
+.menu1 {
+    width: 70vw;
+    height: 200vh;
+    background: linear-gradient(rgb(0,0,0,0.9), rgb(0,0,0,0.55));
+    color: var(--textColor1);
+    padding: 12px 30px;
     border-radius: 15px;
     font-size: 25px;
+    overflow-y: auto;
+    margin-bottom: 20px;
+}
+
+@media only screen and (max-width: 800px) {
+    .menu1 {
+        width: 90vw;
+    }
+    .combos {
+        width: 90vw;
+    }
+}
+@media only screen and (max-width: 350px) {
+    .menu1 {
+        width: 98vw;
+    }
+    .combos {
+        width: 98vw;
+    }
 }
 
 h1 {
@@ -55,8 +137,9 @@ h1 {
     border-bottom: 3px white solid;
     text-align: center;
     font-size: 50px;
+    margin: -0px -30px -0px -30px;
+    margin-bottom: 16px;
 }
-
 
 
 
@@ -66,3 +149,4 @@ h6 {
     text-align: center;
     font-size: 25px;
 }
+
