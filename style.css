@@ -76,9 +76,10 @@ body {
     color: var(--textColor1);
     background: linear-gradient(rgb(0,0,0,0.9), rgb(0,0,0,0.55));
     position: sticky;
+    position: -webkit-sticky;
     top: 0;
     width: 20vw;
-    height: 100vh;
+    height: 50vh;
     border-radius: 10px;
     padding: 16px;
     margin-bottom: 20px;
@@ -89,14 +90,16 @@ body {
     font-size: 35px;
     font-family: var(--fancyFont);
     margin-bottom: 10px;
+    text-align: center;
 }
 
-.menu-body {
+.menu-combo-wrap {
     margin-top: 20px;
     display: flex;
     justify-content: space-around;
-    flex-wrap: wrap;
+    flex-direction: row;
     align-items: center;
+    flex-wrap: wrap;
 }
 
 .menu-body p {
@@ -105,7 +108,7 @@ body {
 
 .menu1 {
     width: 70vw;
-    height: 200vh;
+    height: 150vh;
     background: linear-gradient(rgb(0,0,0,0.9), rgb(0,0,0,0.55));
     color: var(--textColor1);
     padding: 12px 30px;
@@ -113,6 +116,14 @@ body {
     font-size: 25px;
     overflow-y: auto;
     margin-bottom: 20px;
+}
+
+.menu-list {
+    list-style: none;
+}
+
+.menu-list-item-header {
+    font-family: var(--mainFont);
 }
 
 @media only screen and (max-width: 800px) {
@@ -123,7 +134,7 @@ body {
         width: 90vw;
     }
 }
-@media only screen and (max-width: 350px) {
+@media only screen and (max-width: 400px) {
     .menu1 {
         width: 98vw;
     }
@@ -149,4 +160,16 @@ h6 {
     text-align: center;
     font-size: 25px;
 }
+
+h6 a {
+    text-decoration: underline;
+    color: rgb(59, 0, 59);
+}
+
+h6 a:hover {
+    color: rgb(255, 0, 0);
+}
+
+
+
 
