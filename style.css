@@ -18,7 +18,7 @@
 }
 
 body::-webkit-scrollbar {
-    background-color: #9993c0;
+    background-color: transparent;
     width: 10px;
 }
 body::-webkit-scrollbar-thumb {
@@ -79,18 +79,21 @@ body {
     position: -webkit-sticky;
     top: 0;
     width: 20vw;
-    height: 50vh;
     border-radius: 10px;
-    padding: 16px;
-    margin-bottom: 20px;
+    padding: 30px 16px;
+    margin-top: 200px;
     overflow: auto;
 }
 
 .combos h2{
-    font-size: 35px;
+    font-size: 40px;
     font-family: var(--fancyFont);
     margin-bottom: 10px;
     text-align: center;
+}
+
+.combos .menu-list-item {
+    padding: 25px 0px;
 }
 
 .menu-combo-wrap {
@@ -98,7 +101,7 @@ body {
     display: flex;
     justify-content: space-around;
     flex-direction: row;
-    align-items: center;
+    align-items: flex-start;
     flex-wrap: wrap;
 }
 
@@ -108,10 +111,9 @@ body {
 
 .menu1 {
     width: 70vw;
-    height: 150vh;
     background: linear-gradient(rgb(0,0,0,0.9), rgb(0,0,0,0.55));
     color: var(--textColor1);
-    padding: 12px 30px;
+    padding: 20px 30px 50px 30px;
     border-radius: 15px;
     font-size: 25px;
     overflow-y: auto;
@@ -120,11 +122,29 @@ body {
 
 .menu-list {
     list-style: none;
+    padding-bottom: 36px;
 }
 
 .menu-list-item-header {
     font-family: var(--mainFont);
+    font-size: 45px;
+    padding-bottom: 20px;
 }
+
+
+.menu-list-item {
+    font-size: 32px;
+    font-family: var(--condensedFont);
+    position: relative;
+    padding: 15px 0px;
+}
+.menu-list-item span {
+    margin-left: auto;
+    float: right;
+}
+
+
+
 
 @media only screen and (max-width: 800px) {
     .menu1 {
@@ -147,9 +167,9 @@ h1 {
     font-family: var(--fancyFont);
     border-bottom: 3px white solid;
     text-align: center;
-    font-size: 50px;
+    font-size: 85px;
     margin: -0px -30px -0px -30px;
-    margin-bottom: 16px;
+    margin-bottom: 24px;
 }
 
 
