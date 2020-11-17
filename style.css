@@ -17,59 +17,64 @@
     --fancyFont: 'Aguafina Script';
 }
 
-body::-webkit-scrollbar {
+::-webkit-scrollbar {
     background-color: transparent;
     width: 10px;
 }
-body::-webkit-scrollbar-thumb {
+::-webkit-scrollbar-thumb {
     background-color: #16BEC2;
     border-radius: 10px;
 }
-body::-webkit-scrollbar-thumb:hover {
+::-webkit-scrollbar-thumb:hover {
     background-color: #127f81;
 }
-body::-webkit-scrollbar-thumb:active {
+::-webkit-scrollbar-thumb:active {
     background-color: #0d5c5e;
-}
-
-body {
-    background: url('https://www.dinneratthezoo.com/wp-content/uploads/2018/10/smoked-chicken-4.jpg');
-    background-position: center;
-    background-attachment: fixed;
-    background-repeat: no-repeat;
-    background-size: cover;
 }
 
 /* - - - - - */
 
-.parallax-main {
-    perspective: 1px;
+.chicken__img {
+    background: url('https://www.dinneratthezoo.com/wp-content/uploads/2018/10/smoked-chicken-4.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    filter: blur(20px);
+    width: 300vw;
+    height: 200vh;
+}
+
+.parallax {
     height: 100vh;
     overflow-x: hidden;
     overflow-y: auto;
+    -webkit-perspective: 1px;
+    perspective: 1px;
 }
 
-.parallax-bg {
-    position: relative;
-    height: 100vh;
-    transform-style: preserve-3d;
-}
-
-.parallax-layer {
+.parallax__layer {
     position: absolute;
     top: 0;
+    left: 0;
     right: 0;
     bottom: 0;
-    left: 0;
 }
 
-.parallax-layer-base {
+  .parallax__layer--base {
+    -webkit-transform: translateZ(0);
     transform: translateZ(0);
 }
 
-.parallax-layer-back {
-    transform: translateZ(-1px) scale(2);
-    text-align: center;
+  .parallax__layer--back {
+    -webkit-transform: translateZ(-1px) scale(2);
+    transform: translateZ(-1.5px) scale(2);
+    height: 200vh;
+    overflow-x: auto;
+    background: url('https://www.dinneratthezoo.com/wp-content/uploads/2018/10/smoked-chicken-4.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .combos {
@@ -83,6 +88,7 @@ body {
     padding: 30px 16px;
     margin-top: 200px;
     overflow: auto;
+    margin-bottom: 20px;
 }
 
 .combos h2{
@@ -152,6 +158,18 @@ body {
     }
     .combos {
         width: 90vw;
+        margin-top: 20px;
+    }
+    .menu-list-item {
+        font-size: 20px;
+        padding: 10px 0px;
+    }
+    .menu-list-item-header {
+        font-size: 30px;
+        padding-bottom: 10px;
+    }
+    .menu-header {
+        font-size: 65px;
     }
 }
 @media only screen and (max-width: 400px) {
@@ -163,7 +181,7 @@ body {
     }
 }
 
-h1 {
+.menu-header {
     font-family: var(--fancyFont);
     border-bottom: 3px white solid;
     text-align: center;
@@ -171,8 +189,6 @@ h1 {
     margin: -0px -30px -0px -30px;
     margin-bottom: 24px;
 }
-
-
 
 h6 {
     color: white;
