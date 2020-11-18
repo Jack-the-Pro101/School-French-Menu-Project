@@ -34,17 +34,6 @@
 
 /* - - - - - */
 
-.chicken__img {
-    background: url('https://www.dinneratthezoo.com/wp-content/uploads/2018/10/smoked-chicken-4.jpg');
-    background-position: center;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: cover;
-    filter: blur(20px);
-    width: 300vw;
-    height: 200vh;
-}
-
 .parallax {
     height: 100vh;
     overflow-x: hidden;
@@ -68,8 +57,9 @@
 
   .parallax__layer--back {
     -webkit-transform: translateZ(-1px) scale(2);
-    transform: translateZ(-1.5px) scale(2);
+    transform: translateZ(-1.8px) scale(2);
     height: 200vh;
+    width: 180vw;
     overflow-x: auto;
     background: url('https://www.dinneratthezoo.com/wp-content/uploads/2018/10/smoked-chicken-4.jpg');
     background-position: center;
