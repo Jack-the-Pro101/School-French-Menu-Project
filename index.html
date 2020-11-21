@@ -9,6 +9,14 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <div class="rickroll-container" id="die" style="display: none;">
+        <h1>D I E</h1>
+        <div class="rickroll-video">
+            <video id="yeemp4" width="640" height="450" controls>
+                <source src="Yee.mp4" type="video/mp4">
+            </video>
+        </div>
+    </div>
     <main class="parallax">
         <div class="parallax__layer parallax__layer--back"></div>
         
@@ -26,7 +34,7 @@
                     </ul>
                     <ul class="menu-list">
                         <li><h5 class="menu-list-item-header">Repas principaux</h5></li>
-                        <li class="menu-list-item">Boeuf et brocoli <span>18,99$</span></li>
+                        <li class="menu-list-item">Bœuf et brocoli <span>18,99$</span></li>
                         <li class="menu-list-item">Purée de pommes de terre <span>12,99$</span></li>
                         <li class="menu-list-item">Soupe poulet et nouilles <span>12,99$</span></li>
                         <li class="menu-list-item">Sushi au saumon <span>24,99$</span></li>
@@ -53,8 +61,11 @@
                     <ul class="menu-list">
                         <li class="menu-list-item">Baconator au coca moyen, côté poutine <span>14,99$</span></li>
                         <li class="menu-list-item">Quart de livre, pop, frites / rondelles d'oignon <span>7,99$</span></li>
-                        <li class="menu-list-item">Grilled cheese, bacon et oeufs, jus <span>6,99$</span></li>
+                        <li class="menu-list-item">Fromage grillé, bacon et œufs, jus <span>6,99$</span></li>
                     </ul>
+                </section>
+                <section class="order">
+                    <button class="order-button" title="Order des mets" id="orderBtn">Ordre des mets</button>
                 </section>
             </div>
             <h6>© Fresh Food Central - Website by Jack H.<br>
@@ -64,24 +75,7 @@
             </h6>
         </div>
     </main>
-        <!-- <div class="paralax-main">
-        <div class="paralax-bg">
-            <div class="parallax-layer parallax-layer-back">
-                EEE
-            </div>
-            <div class="parallax-layer parallax-layer-base">
-                <main class="menu-body">
-                    <section class="menu1">
-                        <h1>~ Menu ~</h1>
-                    </section>
-                    <section class="combos">
-                        Repas enconomique
-                    </section>
-                </main>
-                <h6>© Fresh Food Central - Website by Jack H.</h6>
-            </div>
-        </div>
-    </div> -->
+    <script src="script.js"></script>
 </body>
 </html>
 

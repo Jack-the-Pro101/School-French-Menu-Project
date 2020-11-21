@@ -58,7 +58,7 @@
   .parallax__layer--back {
     -webkit-transform: translateZ(-1px) scale(2);
     transform: translateZ(-1.8px) scale(2);
-    height: 220vh;
+    height: 250vh;
     width: 180vw;
     overflow-x: auto;
     background: url('https://www.dinneratthezoo.com/wp-content/uploads/2018/10/smoked-chicken-4.jpg');
@@ -196,6 +196,47 @@ h6 a:hover {
     color: rgb(255, 0, 0);
 }
 
+.order {
+    width: 100vw;
+    padding: 20px 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 
+.order-button {
+    display: block;
+    padding: 20px 30px;
+    font-family: var(--mainFont);
+    color: var(--textColor1);
+    font-size: 50px;
+    background: rgba(0, 0, 0, 0.438);
+    border-radius: 60px;
+    border: 4px outset silver;
+    outline: none;
+    transition-duration: 390ms;
+}
+.order-button:hover {
+    background: rgba(0, 0, 0, 0.651);
+    cursor: pointer;
+}
+.order-button:active {
+    background: rgba(66, 21, 0, 0.651);
+    border: 4px inset silver;
+}
 
-
+.rickroll-container {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.781);
+    z-index: 99999999;
+}
+.rickroll-container h1{
+    color: white;
+    font-size: 100px;
+    display: block;
+    font-weight: bold;
+}
